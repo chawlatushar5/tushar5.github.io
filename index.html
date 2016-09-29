@@ -203,30 +203,30 @@
 
 
 
-    <!-- Map Section -->
-    <div id="map"></div>
+    <!-- Map Section--> 
+   
+<div id="map"></div>
+    <script>
+      function initMap() {
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 39.9601683, lng: -75.2038732},
+           scrollwheel: false,
+          zoom: 10
+        });
+		 marker = new google.maps.Marker({
+          map: map,
+          draggable: true,
+          animation: google.maps.Animation.DROP,
+          position:{lat: 39.9601683, lng: -75.2038732}
+        });
+      }
+      
 
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; Tushar Chawla 2016</p>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANZewrs_cg6Z-pjV6zbooyRh9N-vGc96s&sensor=false"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
+    </script>
+    <script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEwnlf9OTkKV3lcKrvI9F7B1j9kg2n-uM&callback=initMap"
+    async defer></script>
 
 </body>
 
